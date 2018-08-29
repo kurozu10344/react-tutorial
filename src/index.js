@@ -1,24 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 
 class Square extends React.Component {
-  render() {
+  render () {
     return (
       <button className="square">
         {/* TODO */}
       </button>
-    );
+    )
   }
 }
 
 class Board extends React.Component {
-  renderSquare(i) {
-    return <Square />;
+  renderSquare (i) {
+    return <Square />
   }
 
-  render() {
-    const status = 'Next player: X';
+  render () {
+    const status = 'Next player: X'
 
     return (
       <div>
@@ -39,12 +39,12 @@ class Board extends React.Component {
           {this.renderSquare(8)}
         </div>
       </div>
-    );
+    )
   }
 }
 
 class Game extends React.Component {
-  render() {
+  render () {
     return (
       <div className="game">
         <div className="game-board">
@@ -55,12 +55,12 @@ class Game extends React.Component {
           <ol>{/* TODO */}</ol>
         </div>
       </div>
-    );
+    )
   }
 }
 
 class ShoppingList extends React.Component {
-  render() {
+  render () {
     /*
     return (
       <div className="shopping-list">
@@ -74,22 +74,21 @@ class ShoppingList extends React.Component {
     )
     */
 
-    return React.createElement("div", { className: "shopping-list" },
-      React.createElement( "h1", null, "Shopping List for ", this.props.name),
-      React.createElement( "ul", null,
-        React.createElement( "li", null, "Instagram"),
-        React.createElement( "li", null, "WhatsApp"),
-        React.createElement( "li", null, "Oculus")
+    return React.createElement('div', { className: 'shopping-list' },
+      React.createElement('h1', null, 'Shopping List for ', this.props.name),
+      React.createElement('ul', null,
+        React.createElement('li', null, 'Instagram'),
+        React.createElement('li', null, 'WhatsApp'),
+        React.createElement('li', null, 'Oculus')
       )
-    );
+    )
   }
 }
 
 // ========================================
 
 ReactDOM.render(
-  // <Game />,
-  <ShoppingList name="Mark" />,
+  <Game />,
+  // <ShoppingList name="Mark" />,
   document.getElementById('root')
-);
-
+)
